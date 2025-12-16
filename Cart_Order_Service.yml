@@ -1,11 +1,11 @@
 spring:
-    datasource:
-        url: jdbc:postgresql://localhost:5432/Cart_Order_ServiceDb
-        driver-class-name: org.postgresql.Driver
-        username: hemanth
-        password: hemanth
-        hikari:
-          connection-init-sql: SET TIME ZONE 'Asia/Kolkata';  # This ensures every connection uses correct timezone
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Cart_Order_ServiceDb
+    driver-class-name: org.postgresql.Driver
+    username: hemanth
+    password: hemanth
+    hikari:
+      connection-init-sql: SET TIME ZONE 'Asia/Kolkata';
 
   jpa:
     hibernate:
@@ -16,8 +16,7 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
         jdbc:
-          time_zone: Asia/Kolkata   # IMPORTANT: Hibernate will use this timezone
+          time_zone: Asia/Kolkata
 
 server:
   port: 8083
-
