@@ -2,8 +2,8 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/Product_ServiceDb
     driver-class-name: org.postgresql.Driver
-    username: hemanth
-    password: hemanth
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
     hikari:
       connection-init-sql: SET TIME ZONE 'Asia/Kolkata';
 
