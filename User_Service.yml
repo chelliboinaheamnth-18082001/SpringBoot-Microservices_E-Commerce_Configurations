@@ -22,4 +22,4 @@ server:
   port: 8081
 
 app:
-  message: Hello User-Service Bus Refresh
+  message: Hello User-Service
