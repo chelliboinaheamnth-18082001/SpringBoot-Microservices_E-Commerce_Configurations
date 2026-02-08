@@ -1,26 +1,26 @@
-spring:
-  cloud:
-    gateway:
-      routes:
+# spring:
+#   cloud:
+#     gateway:
+#       routes:
 
-        - id: eureka_server
-          uri: http://localhost:8761
-          predicates:
-            - Path=/eureka/**
-          filters:
-            - StripPrefix=1
+#         - id: eureka_server
+#           uri: http://localhost:8761
+#           predicates:
+#             - Path=/eureka/**
+#           filters:
+#             - StripPrefix=1
 
-        - id: user_service
-          uri: lb://USERSERVICE
-          predicates:
-            - Path=/api/users,/api/users/**
+#         - id: user_service
+#           uri: lb://USERSERVICE
+#           predicates:
+#             - Path=/api/users,/api/users/**
 
-        - id: product_service
-          uri: lb://PRODUCTSERVICE
-          predicates:
-            - Path=/api/products/**
+#         - id: product_service
+#           uri: lb://PRODUCTSERVICE
+#           predicates:
+#             - Path=/api/products/**
 
-        - id: cart_order_service
-          uri: lb://CART_ORDER_SERVICE
-          predicates:
-            - Path=/api/cart-items/**,/api/order/**
+#         - id: cart_order_service
+#           uri: lb://CART_ORDER_SERVICE
+#           predicates:
+#             - Path=/api/cart-items/**,/api/order/**
